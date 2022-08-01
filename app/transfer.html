@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel-Admin</title>
 
     <!--Font awesome icons-->
@@ -16,47 +15,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!--Simplebar css-->
-    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css" />
 
     <!--Choices css-->
-    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css" />
+
+    <!--Page style-->
+    <link rel="stylesheet" href="assets/vendor/css/daterangepicker.css" />
+    <link rel="stylesheet" href="assets/vendor/css/bs-stepper.min.css" />
 
     <!--Main style-->
-    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <link
+      rel="stylesheet"
+      href="assets/css/style.min.css"
+      id="switchThemeStyle"
+    />
   </head>
 
   <body>
-       <!--////////////////// PreLoader Start//////////////////////-->
-       <div class="loader">
-         <!--Placeholder animated layout for preloader-->
-         <div class="d-flex flex-column flex-root">
-           <div class="page d-flex flex-row flex-column-fluid">
+      <!--////////////////// PreLoader Start//////////////////////-->
+      <div class="loader">
+        <!--Placeholder animated layout for preloader-->
+        <div class="d-flex flex-column flex-root">
+          <div class="page d-flex flex-row flex-column-fluid">
 
-             <!--Sidebar start-->
-             <aside class="page-sidebar aside-dark placeholder-wave">
-               <div class="placeholder col-12 h-100 bg-gray"></div>
-             </aside>
-             <div class="page-content d-flex flex-column flex-row-fluid">
-               <div
-                 class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
-                 <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
-                   <i class="anim-spinner fas fa-spinner me-3"></i>
-                   <div>
-                   <span>Loading...</span>
-                 </div>
-               </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-       <!--////////////////// /.PreLoader END//////////////////////-->
+            <!--Sidebar start-->
+            <aside class="page-sidebar aside-dark placeholder-wave">
+              <div class="placeholder col-12 h-100 bg-gray"></div>
+            </aside>
+            <div class="page-content d-flex flex-column flex-row-fluid">
+              <div
+                class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+                <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                  <i class="anim-spinner fas fa-spinner me-3"></i>
+                  <div>
+                  <span>Loading...</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--////////////////// /.PreLoader END//////////////////////-->
 
-        <!--App Start-->
+    <!--App Start-->
     <div class="d-flex flex-column flex-root">
       <!--Page-->
       <div class="page d-flex flex-row flex-column-fluid">
-
         <!--///////////Page sidebar begin///////////////-->
         <aside class="page-sidebar">
           <div class="h-100 flex-column d-flex" data-simplebar>
@@ -105,7 +111,7 @@
                   </li>
                   <li class="nav-item">
                     <a href="cards.html"
-                      class="nav-link d-flex align-items-center text-truncate active">
+                      class="nav-link d-flex align-items-center text-truncate ">
                       <span class="sidebar-icon">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                           <path d="M10.75 9a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5h-1.5z">
@@ -182,8 +188,6 @@
 
         <!--///////////Page content wrapper///////////////-->
         <main class="page-content d-flex flex-column flex-row-fluid">
-
-
           <!--//page-header//-->
           <header class="navbar py-0 page-header border-bottom navbar-expand navbar-light px-4">
             <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -455,17 +459,12 @@
           </header>
           <!--Main Header End-->
 
-
           <!--//Page Toolbar//-->
-          <div class="toolbar pb-0 p-4">
+          <div class="toolbar p-4 pb-0">
             <div class="position-relative container-fluid px-0">
               <div class="row align-items-center position-relative">
                 <div class="col-md-8 mb-4 mb-md-0">
-                  <h3 class="mb-2">Virtual Cards</h3>
-                </div>
-                <div class="col-md-4 text-md-end">
-                  <a href="#!.html" class="btn btn-success">
-                  <i class="fas fa-plus small me-2 align-middle"></i>Add Card</a>
+                  <h3 class="mb-2">Transfer Funds</h3>
                 </div>
               </div>
             </div>
@@ -473,51 +472,320 @@
           <!--//Page Toolbar End//-->
 
           <!--//Page content//-->
-          <div class="content p-4 flex-column-fluid">
-            <div class="row">
-              <!--Card-->
-              <div class="col-sm-6 col-xl-3">
-                <div class="card rounded-3 mb-4">
-                  <!-- Card - Body -->
-                  <div class="card-body mt-0">
-                    <span class="badge badge-pill bg-tint-success text-success">Active</span>
-                    <div class="row align-items-stretch mt-3">
-                      <div class="col">
-                        <h5 class="mb-1">
-                          <a class="stretched-link link-dark" href="card-transactions.html">Udi Haik</a>
-                        </h5>
-                        <small class="text-muted d-block mb-2">
-                          Google Cloud Server
-                        </small>
-                        <div class="cc-number d-block mb-2">
-                          ···· ···· ···· 3087
+          <div class="content p-4 pb-0 d-flex flex-column-fluid">
+            <div class="container-fluid px-0">
+              <div class="card card-body mb-4 p-0">
+                <div class="bs-stepper w-100" id="stepperDemo">
+                  <!--Stepper header start-->
+                  <div
+                    class="bs-stepper-header border-bottom shadow-sm px-4 py-3"
+                    role="tablist"
+                  >
+                    <div class="step active" data-target="#stepper-step-1">
+                      <button
+                        type="button"
+                        class="step-trigger"
+                        role="tab"
+                        id="stepperDemotrigger1"
+                        aria-controls="stepper-step-1"
+                        aria-selected="true"
+                      >
+                        <span class="bs-stepper-circle">
+                          <i class="fas fa-users fs-4"></i>
+                        </span>
+                        <span class="bs-stepper-label">Contact Details</span>
+                      </button>
+                    </div>
+                    <div class="bs-stepper-line"></div>
+                    <div class="step" data-target="#stepper-step-2">
+                      <button
+                        type="button"
+                        class="step-trigger"
+                        role="tab"
+                        id="stepperDemotrigger2"
+                        aria-controls="stepper-step-2"
+                        aria-selected="false"
+                      >
+                        <span class="bs-stepper-circle">
+                          <i class="fas fs-4 fa-upload"></i>
+                        </span>
+                        <span class="bs-stepper-label">Upload</span>
+                      </button>
+                    </div>
+                    <div class="bs-stepper-line"></div>
+                    <div class="step" data-target="#stepper-step-3">
+                      <button
+                        type="button"
+                        class="step-trigger"
+                        role="tab"
+                        id="stepperDemotrigger3"
+                        aria-controls="stepper-step-3"
+                        aria-selected="false"
+                      >
+                        <span class="bs-stepper-circle">
+                          <i class="fas fa-save fs-4"></i>
+                        </span>
+                        <span class="bs-stepper-label">Submit</span>
+                      </button>
+                    </div>
+                  </div>
+                  <!--Stepper header end-->
+
+                  <!--Stepper content start-->
+                  <div class="bs-stepper-content p-4">
+                    <form action="#">
+                      <!--Step-1-->
+                      <div
+                        id="stepper-step-1"
+                        class="content"
+                        aria-labelledby="stepper-step-1"
+                      >
+                        <!--Content-->
+                        <div class="d-flex align-items-center mb-4">
+                          <div
+                            class="flex-grow-1 pt-1 bg-body rounded-pill"
+                          ></div>
+                          <h5 class="px-lg-4 px-2 mb-0">Account Information</h5>
+                          <div
+                            class="flex-grow-1 pt-1 bg-body rounded-pill"
+                          ></div>
+                        </div>
+                        <div class="row mb-3">
+                          <div class="col-md-6 mb-3">
+                            <label for="camCategories" class="form-label"
+                              >Recipient Name</label
+                            >
+                            <select
+                              multiple
+                              class="choices__inner"
+                              id="camCategories"
+                              placeholder="Enter new or select"
+                              data-choices='{"silent": true,"removeItems": "true","removeItemButton": "true"}'
+                            >
+                              <option value="Adam Smith">Adam Smith</option>
+                              <option value="Anton Egond">Anton Egond</option>
+                              <option value="Satoshi Nakamoto">
+                                Satoshi Nakamoto
+                              </option>
+                              <option value="Max Mustermann">
+                                Max Mustermann
+                              </option>
+                              <option value="Jane Doe">Jane Doe</option>
+                              <option value="Food & Gifts">
+                                Michael Smith
+                              </option>
+                            </select>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="camName" class="form-label">IBAN</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="DE XXXX XXXX XXXX"
+                              id="camName"
+                            />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="camPayout" class="form-label"
+                              >Amount</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="€10.00"
+                              id="camPayout"
+                            />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="camPayout" class="form-label"
+                              >Purpose</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Invoice XXX"
+                            />
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="camAccess" class="form-label"
+                              >Category</label
+                            >
+                            <select
+                              name=""
+                              id="camAccess"
+                              class="form-control"
+                              data-choices='{"searchEnabled":false}'
+                            >
+                              <option value="">Office Supplies</option>
+                              <option value="Public">Travel Expenses</option>
+                              <option value="Private">
+                                Training & Education
+                              </option>
+                              <option value="Manual">Business INsurance</option>
+                              <option value="Manual">
+                                Loan & Interest Payments
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+                        <!--Next button-->
+                        <div class="d-flex justify-content-end">
+                          <button
+                            type="button"
+                            class="btn btn-primary"
+                            onclick="stepDemo.next()"
+                          >
+                            Continue
+                            <i class="fas fa-chevron-right small ms-1"></i>
+                          </button>
                         </div>
                       </div>
-                    </div>
-                    <img src="assets/media/brand-logos/visa.svg" class="height-20 float-right w-auto me-4" alt="visa logo">
-                  </div>
-                </div>
-              </div>
-              <!--Card-->
-              <div class="col-sm-6 col-xl-3">
-                <div class="card rounded-3 mb-4">
-                  <!-- Card - Body -->
-                  <div class="card-body mt-0">
-                    <span class="badge badge-pill bg-tint-danger text-danger">Blocked</span>
-                    <div class="row align-items-stretch mt-3">
-                      <div class="col">
-                        <h5 class="mb-1">
-                          <a class="stretched-link link-dark" href="card-transactions.html">Dan Mullers</a>
-                        </h5>
-                        <small class="text-muted d-block mb-2">
-                          Google Cloud Server
-                        </small>
-                        <small class="cc-number d-block mb-2">
-                          ···· ···· ···· 4089
-                        </small>
+
+                      <!--Step-2-->
+                      <div
+                        id="stepper-step-2"
+                        class="content"
+                        aria-labelledby="stepper-step-2"
+                      >
+                        <!--Content-->
+                        <div class="d-flex align-items-center mb-4">
+                          <div
+                            class="flex-grow-1 pt-1 bg-body rounded-pill"
+                          ></div>
+                          <h5 class="px-lg-4 px-2 mb-0">Upload Supporting Documents</h5>
+                          <div
+                            class="flex-grow-1 pt-1 bg-body rounded-pill"
+                          ></div>
+                        </div>
+
+                        <!--//Drop Files//-->
+                        <div class="d-flex flex-column-fluid">
+                          <div class="container-fluid px-0">
+                            <div class="row">
+                              <div class="col-12 mb-4">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <form
+                                      class="dropzone border rounded-2"
+                                      id="demo-upload"
+                                      action="#"
+                                    >
+                                      <div class="dz-message text-center">
+                                        <p>
+                                          Drop files here or click to upload.
+                                        </p>
+                                      </div>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!--//Drop Files content End//-->
+                        <div class="d-flex justify-content-between">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            onclick="stepDemo.previous()"
+                          >
+                            <i class="fas fa-chevron-left small me-1"></i> Back
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-primary"
+                            onclick="stepDemo.next()"
+                          >
+                            Continue<i
+                              class="fas fa-chevron-right small ms-1"
+                            ></i>
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <img src="assets/media/brand-logos/visa.svg" class="height-20 float-right w-auto me-4" alt="visa logo">
+                      <!--Step-3-->
+                      <div
+                        id="stepper-step-3"
+                        class="content"
+                        aria-labelledby="stepper-step-3"
+                      >
+                        <!--Content-->
+                        <div class="d-flex align-items-center mb-4">
+                          <div
+                            class="flex-grow-1 pt-1 bg-body rounded-pill"
+                          ></div>
+                          <h5 class="px-lg-4 px-2 mb-0">Overview</h5>
+                          <div
+                            class="flex-grow-1 pt-1 bg-body rounded-pill"
+                          ></div>
+                        </div>
+
+                        <div class="table-responsive">
+                          <table class="table-striped table">
+                            <tbody>
+                              <tr>
+                                <td class="text-muted">Transfer To</td>
+                                <td>Adam Smith</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted">IBAN</td>
+                                <td>DE 89 37040044 0532013000</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted">Bank</td>
+                                <td>Berliner Sparkasse</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted">BIC</td>
+                                <td>BELADEBEXXX</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted">Purpose</td>
+                                <td>Dinner last night</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted">Categories:</td>
+                                <td>
+                                  <div class="mb-0">
+                                    <span
+                                      class="badge bg-primary rounded-pill mb-2 mb-md-0 me-1 px-3 py-2"
+                                      >Computer &amp; networking</span
+                                    >
+                                    <span
+                                      class="badge bg-primary rounded-pill mb-2 mb-md-0 me-1 px-3 py-2"
+                                      >Software</span
+                                    >
+                                    <span
+                                      class="badge bg-primary rounded-pill mb-2 mb-md-0 me-1 px-3 py-2"
+                                      >Social Media</span
+                                    >
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted">Amount:</td>
+                                <td>$150.00</td>
+                              </tr>
+                              <tr>
+                                <td class="text-muted">Document:</td>
+                                <td><a href="#">invoice.pdf</a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            onclick="stepDemo.previous()"
+                          >
+                            <i class="fas fa-chevron-left small me-1"></i>Back
+                          </button>
+                          <button type="submit" class="btn btn-primary">
+                            Send payment <i class="fas fa-paper-plane small ms-1"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
@@ -549,6 +817,107 @@
     <!--////////////Theme Core scripts End/////////////////-->
 
 
-  </body>
+    <!--Bs-Stepper script-->
+    <script src="assets/vendor/bs-stepper.min.js"></script>
+    <script>
+      var stepDemo = new Stepper(document.querySelector("#stepperDemo"));
+      stepDemo.next();
+      stepDemo.previous();
+    </script>
 
+    <!--Calendar for start and end date-->
+    <script src="assets/vendor/moment.min.js"></script>
+    <script src="assets/vendor/daterangepicker.js"></script>
+    <script>
+      $(function () {
+        $('input[name="camDate"]').daterangepicker({
+          singleDatePicker: true,
+          showDropdowns: true,
+          autoApply: true,
+          minYear: parseInt(moment().format("YYYY"), 10),
+          maxYear: 2025,
+        });
+      });
+    </script>
+    <script src="assets/vendor/dropzone.min.js"></script>
+    <script>
+      "use strict";
+
+      // Prevent Dropzone from auto discovering this element:
+      Dropzone.options.demoUpload = false;
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropzone = new Dropzone("#demo-upload", {
+          parallelUploads: 2,
+          thumbnailHeight: 120,
+          thumbnailWidth: 120,
+          maxFilesize: 3,
+          filesizeBase: 1000,
+          thumbnail: function (file, dataUrl) {
+            if (file.previewElement) {
+              file.previewElement.classList.remove("dz-file-preview");
+              var images = file.previewElement.querySelectorAll(
+                "[data-dz-thumbnail]"
+              );
+              for (var i = 0; i < images.length; i++) {
+                var thumbnailElement = images[i];
+                thumbnailElement.alt = file.name;
+                thumbnailElement.src = dataUrl;
+              }
+              setTimeout(function () {
+                file.previewElement.classList.add("dz-image-preview");
+              }, 1);
+            }
+          },
+        });
+
+        // Now fake the file upload for demo purposes, delete this function on production and create a backend script
+        // and returns a 404
+
+        const minSteps = 6,
+          maxSteps = 60,
+          timeBetweenSteps = 100,
+          bytesPerStep = 100000;
+
+        dropzone.uploadFiles = function (files) {
+          var self = this;
+
+          for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            var totalSteps = Math.round(
+              Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep))
+            );
+
+            for (var step = 0; step < totalSteps; step++) {
+              var duration = timeBetweenSteps * (step + 1);
+              setTimeout(
+                (function (file, totalSteps, step) {
+                  return function () {
+                    file.upload = {
+                      progress: (100 * (step + 1)) / totalSteps,
+                      total: file.size,
+                      bytesSent: ((step + 1) * file.size) / totalSteps,
+                    };
+
+                    self.emit(
+                      "uploadprogress",
+                      file,
+                      file.upload.progress,
+                      file.upload.bytesSent
+                    );
+                    if (file.upload.progress == 100) {
+                      file.status = Dropzone.SUCCESS;
+                      self.emit("success", file, "success", null);
+                      self.emit("complete", file);
+                      self.processQueue();
+                    }
+                  };
+                })(file, totalSteps, step),
+                duration
+              );
+            }
+          }
+        };
+      });
+    </script>
+  </body>
 </html>

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panel-Admin</title>
 
     <!--Font awesome icons-->
@@ -16,47 +15,52 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!--Simplebar css-->
-    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css" />
 
     <!--Choices css-->
-    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css" />
 
+    <!--Upload style-->
+    <link rel="stylesheet" href="assets/vendor/css/dropzone.min.css" />
     <!--Main style-->
-    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    <link
+      rel="stylesheet"
+      href="assets/css/style.min.css"
+      id="switchThemeStyle"
+    />
   </head>
 
   <body>
-       <!--////////////////// PreLoader Start//////////////////////-->
-       <div class="loader">
-         <!--Placeholder animated layout for preloader-->
-         <div class="d-flex flex-column flex-root">
-           <div class="page d-flex flex-row flex-column-fluid">
+      <!--////////////////// PreLoader Start//////////////////////-->
+      <div class="loader">
+        <!--Placeholder animated layout for preloader-->
+        <div class="d-flex flex-column flex-root">
+          <div class="page d-flex flex-row flex-column-fluid">
 
-             <!--Sidebar start-->
-             <aside class="page-sidebar aside-dark placeholder-wave">
-               <div class="placeholder col-12 h-100 bg-gray"></div>
-             </aside>
-             <div class="page-content d-flex flex-column flex-row-fluid">
-               <div
-                 class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
-                 <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
-                   <i class="anim-spinner fas fa-spinner me-3"></i>
-                   <div>
-                   <span>Loading...</span>
-                 </div>
-               </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-       <!--////////////////// /.PreLoader END//////////////////////-->
+            <!--Sidebar start-->
+            <aside class="page-sidebar aside-dark placeholder-wave">
+              <div class="placeholder col-12 h-100 bg-gray"></div>
+            </aside>
+            <div class="page-content d-flex flex-column flex-row-fluid">
+              <div
+                class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+                <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                  <i class="anim-spinner fas fa-spinner me-3"></i>
+                  <div>
+                  <span>Loading...</span>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--////////////////// /.PreLoader END//////////////////////-->
 
-        <!--App Start-->
+    <!--App Start-->
     <div class="d-flex flex-column flex-root">
       <!--Page-->
       <div class="page d-flex flex-row flex-column-fluid">
-
         <!--///////////Page sidebar begin///////////////-->
         <aside class="page-sidebar">
           <div class="h-100 flex-column d-flex" data-simplebar>
@@ -105,7 +109,7 @@
                   </li>
                   <li class="nav-item">
                     <a href="cards.html"
-                      class="nav-link d-flex align-items-center text-truncate active">
+                      class="nav-link d-flex align-items-center text-truncate ">
                       <span class="sidebar-icon">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
                           <path d="M10.75 9a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5h-1.5z">
@@ -182,8 +186,6 @@
 
         <!--///////////Page content wrapper///////////////-->
         <main class="page-content d-flex flex-column flex-row-fluid">
-
-
           <!--//page-header//-->
           <header class="navbar py-0 page-header border-bottom navbar-expand navbar-light px-4">
             <a href="index.html" class="navbar-brand d-block d-lg-none">
@@ -455,17 +457,31 @@
           </header>
           <!--Main Header End-->
 
-
           <!--//Page Toolbar//-->
-          <div class="toolbar pb-0 p-4">
+          <div class="toolbar p-4 pb-0">
             <div class="position-relative container-fluid px-0">
               <div class="row align-items-center position-relative">
                 <div class="col-md-8 mb-4 mb-md-0">
-                  <h3 class="mb-2">Virtual Cards</h3>
+                  <h3 class="mb-2">Upload</h3>
+
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                      </li>
+                      <li class="breadcrumb-item active">Forms</li>
+                      <li class="breadcrumb-item active">Upload</li>
+                    </ol>
+                  </nav>
                 </div>
                 <div class="col-md-4 text-md-end">
-                  <a href="#!.html" class="btn btn-success">
-                  <i class="fas fa-plus small me-2 align-middle"></i>Add Card</a>
+                  <a
+                    href="https://www.dropzonejs.com/"
+                    target="_blank"
+                    class="text-body"
+                    >Learn more
+                    <i class="fas fa-external-link-alt small ms-1"></i
+                  ></a>
                 </div>
               </div>
             </div>
@@ -473,51 +489,28 @@
           <!--//Page Toolbar End//-->
 
           <!--//Page content//-->
-          <div class="content p-4 flex-column-fluid">
-            <div class="row">
-              <!--Card-->
-              <div class="col-sm-6 col-xl-3">
-                <div class="card rounded-3 mb-4">
-                  <!-- Card - Body -->
-                  <div class="card-body mt-0">
-                    <span class="badge badge-pill bg-tint-success text-success">Active</span>
-                    <div class="row align-items-stretch mt-3">
-                      <div class="col">
-                        <h5 class="mb-1">
-                          <a class="stretched-link link-dark" href="card-transactions.html">Udi Haik</a>
-                        </h5>
-                        <small class="text-muted d-block mb-2">
-                          Google Cloud Server
-                        </small>
-                        <div class="cc-number d-block mb-2">
-                          ···· ···· ···· 3087
+          <div class="content p-4 pb-0 d-flex flex-column-fluid">
+            <div class="container-fluid px-0">
+              <div class="row">
+                <div class="col-12 mb-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <form
+                        class="dropzone border rounded-2"
+                        id="demo-upload"
+                        action="#"
+                      >
+                        <div class="dz-message">
+                          <p>Drop files here or click to upload.</p>
+                          <p>
+                            <span class="note"
+                              >(This is just a demo dropzone. Selected files are
+                              <strong>not</strong> actually uploaded.)</span
+                            >
+                          </p>
                         </div>
-                      </div>
+                      </form>
                     </div>
-                    <img src="assets/media/brand-logos/visa.svg" class="height-20 float-right w-auto me-4" alt="visa logo">
-                  </div>
-                </div>
-              </div>
-              <!--Card-->
-              <div class="col-sm-6 col-xl-3">
-                <div class="card rounded-3 mb-4">
-                  <!-- Card - Body -->
-                  <div class="card-body mt-0">
-                    <span class="badge badge-pill bg-tint-danger text-danger">Blocked</span>
-                    <div class="row align-items-stretch mt-3">
-                      <div class="col">
-                        <h5 class="mb-1">
-                          <a class="stretched-link link-dark" href="card-transactions.html">Dan Mullers</a>
-                        </h5>
-                        <small class="text-muted d-block mb-2">
-                          Google Cloud Server
-                        </small>
-                        <small class="cc-number d-block mb-2">
-                          ···· ···· ···· 4089
-                        </small>
-                      </div>
-                    </div>
-                    <img src="assets/media/brand-logos/visa.svg" class="height-20 float-right w-auto me-4" alt="visa logo">
                   </div>
                 </div>
               </div>
@@ -549,6 +542,85 @@
     <!--////////////Theme Core scripts End/////////////////-->
 
 
-  </body>
+    <script src="assets/vendor/dropzone.min.js"></script>
+    <script>
+      "use strict";
 
+      // Prevent Dropzone from auto discovering this element:
+      Dropzone.options.demoUpload = false;
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropzone = new Dropzone("#demo-upload", {
+          parallelUploads: 2,
+          thumbnailHeight: 120,
+          thumbnailWidth: 120,
+          maxFilesize: 3,
+          filesizeBase: 1000,
+          thumbnail: function (file, dataUrl) {
+            if (file.previewElement) {
+              file.previewElement.classList.remove("dz-file-preview");
+              var images = file.previewElement.querySelectorAll(
+                "[data-dz-thumbnail]"
+              );
+              for (var i = 0; i < images.length; i++) {
+                var thumbnailElement = images[i];
+                thumbnailElement.alt = file.name;
+                thumbnailElement.src = dataUrl;
+              }
+              setTimeout(function () {
+                file.previewElement.classList.add("dz-image-preview");
+              }, 1);
+            }
+          },
+        });
+
+        // Now fake the file upload for demo purposes, delete this function on production and create a backend script
+        // and returns a 404
+
+        const minSteps = 6,
+          maxSteps = 60,
+          timeBetweenSteps = 100,
+          bytesPerStep = 100000;
+
+        dropzone.uploadFiles = function (files) {
+          var self = this;
+
+          for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            var totalSteps = Math.round(
+              Math.min(maxSteps, Math.max(minSteps, file.size / bytesPerStep))
+            );
+
+            for (var step = 0; step < totalSteps; step++) {
+              var duration = timeBetweenSteps * (step + 1);
+              setTimeout(
+                (function (file, totalSteps, step) {
+                  return function () {
+                    file.upload = {
+                      progress: (100 * (step + 1)) / totalSteps,
+                      total: file.size,
+                      bytesSent: ((step + 1) * file.size) / totalSteps,
+                    };
+
+                    self.emit(
+                      "uploadprogress",
+                      file,
+                      file.upload.progress,
+                      file.upload.bytesSent
+                    );
+                    if (file.upload.progress == 100) {
+                      file.status = Dropzone.SUCCESS;
+                      self.emit("success", file, "success", null);
+                      self.emit("complete", file);
+                      self.processQueue();
+                    }
+                  };
+                })(file, totalSteps, step),
+                duration
+              );
+            }
+          }
+        };
+      });
+    </script>
+  </body>
 </html>
