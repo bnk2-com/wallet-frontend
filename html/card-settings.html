@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root bg-cover bg-no-repeat">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                @@include('./partials/sidebars/sidebar.html',{"page": "pages"} )
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                    @@include('./partials/header/header-default.html')
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar p-4 pb-0">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8 mb-3 mb-lg-0">
+                                    <h3 class="mb-2">Card: Udi Haik</h3>
+                                    <p class="mb-0 text-muted">Google Cloud Servers</p>
+
+
+                                </div>
+                                <div class="col-md-4">
+                                    <nav aria-label="breadcrumb" class="d-flex justify-content-md-end">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="cards.html">Cards</a></li>
+                                            <li class="breadcrumb-item"><a href="card-transactions.html">Udi Haik</a></li>
+                                            <li class="breadcrumb-item active">Settings</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+
+                    <!--//Page content//-->
+                    <div class="content p-4 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0 h-100">
+
+                            <div class="row h-100">
+                                <div class="col-lg-3">
+                                    <!--Account nav-->
+                                    <ul class="nav nav-tabs nav-vertical mb-4 h-100">
+                                        <li class="nav-item">
+                                            <a href="card-transactions.html" class="nav-link px-3">
+                                                <i class="far fa-list-alt width-25 align-middle"></i>Transactions
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="card-settings.html" class="nav-link active px-3">
+                                                <i class="far fa-sun width-25 align-middle"></i>Settings
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-9">
+                                    <!--Card-->
+                                    <div class="card mb-4">
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-12 col-md-12 mb-3">
+
+                                                        <!-- First name -->
+                                                        <div class="form-group">
+
+                                                            <!-- Label -->
+                                                            <label class="form-label" for="user_fname">
+                                                                Description
+                                                            </label>
+
+                                                            <!-- Input -->
+                                                            <input type="text" value="Google Cloud Server" class="form-control"
+                                                                id="user_fname">
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-12 col-md-6 mb-3">
+                                                        <label for="maskCurrency" class="form-label">Monthly Spending Limit</label>
+                                                            <input id="maskCurrency" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 2, 'digitsOptional': false, 'prefix': '€ ', 'placeholder': '9,999'" inputmode="decimal" class="form-control">
+                                                    </div>
+                                                    <div class="col-12 col-md-6 mb-3">
+                                                        <label for="maskCurrency" class="form-label">Daily Spending Limit</label>
+                                                            <input id="maskCurrency" data-inputmask="'alias': 'numeric', 'groupSeparator': ',', 'digits': 2, 'digitsOptional': false, 'prefix': '€ ', 'placeholder': '9999'" inputmode="decimal" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="text-end">
+                                                    <button type="button" class="btn btn-primary">Save Changes</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row justify-content-between align-items-center">
+                                                <div class="col-12 col-md-9">
+
+                                                    <!-- Delete heading -->
+                                                    <h4>
+                                                        Delete your Card
+                                                    </h4>
+
+                                                    <!-- Delete text -->
+                                                    <p class="small text-muted mb-md-0">
+                                                        <strong>Note:</strong>
+                                                        Deleting your card is a permanent action and will not be
+                                                        revertable.
+                                                    </p>
+                                                </div>
+                                                <div class="col-auto">
+
+                                                    <!--Delete Button -->
+                                                    <button class="btn btn-danger">
+                                                        Delete
+                                                    </button>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+
+        <!--Page script begin-->
+        <script src="assets/vendor/inputmask.min.js"></script>
+        <script>
+            Inputmask().mask(document.querySelectorAll("[data-inputmask]"));
+        </script>
+    </body>
+
+</html>

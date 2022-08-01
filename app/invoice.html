@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel-Admin</title>
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        <!--Font awesome icons-->
+        <link href="assets/fonts/font-awesome5-free/css/all.min.css" rel="stylesheet">
+
+        <!--Google web fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    </head>
+
+    <body>
+          <!--////////////////// PreLoader Start//////////////////////-->
+          <div class="loader">
+            <!--Placeholder animated layout for preloader-->
+            <div class="d-flex flex-column flex-root">
+              <div class="page d-flex flex-row flex-column-fluid">
+
+                <!--Sidebar start-->
+                <aside class="page-sidebar aside-dark placeholder-wave">
+                  <div class="placeholder col-12 h-100 bg-gray"></div>
+                </aside>
+                <div class="page-content d-flex flex-column flex-row-fluid">
+                  <div
+                    class="content flex-column p-4 pb-0 d-flex justify-content-center align-items-center flex-column-fluid position-relative">
+                    <div class="w-100 h-100 position-relative d-flex align-items-center justify-content-center">
+                      <i class="anim-spinner fas fa-spinner me-3"></i>
+                      <div>
+                      <span>Loading...</span>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--////////////////// /.PreLoader END//////////////////////-->
+
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                <!--///////////Page sidebar begin///////////////-->
+                <aside class="page-sidebar">
+                  <div class="h-100 flex-column d-flex" data-simplebar>
+
+                    <!--Aside-logo-->
+                    <div class="aside-logo p-3 position-relative">
+                      <a href="index.html" class="d-block pe-2">
+                        <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                          <!--Sidebar-icon-->
+                          <span class="sidebar-icon fs-5 lh-1">
+                            <svg viewBox="0 0 120 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M100.395 31.3519C99.6908 31.3519 99.3386 31.0007 99.3386 30.2981V27.5757C99.3386 27.078 99.5294 26.6535 99.911 26.3023L109.819 16.3346C112.226 13.8757 113.43 11.7387 113.43 9.92372C113.43 8.63569 113.078 7.64039 112.373 6.93782C111.698 6.23526 110.773 5.88398 109.599 5.88398C107.192 5.88398 105.826 6.93782 105.504 9.04552C105.386 9.68954 105.019 10.0115 104.403 10.0115H100.395C99.6908 10.0115 99.3679 9.66026 99.4266 8.9577C99.5734 6.9671 100.146 5.28387 101.144 3.90802C102.172 2.53216 103.39 1.53686 104.799 0.922118C106.237 0.307373 107.793 0 109.467 0C110.758 0 111.991 0.204915 113.166 0.614745C114.34 1.02457 115.397 1.62468 116.336 2.41507C117.305 3.17618 118.068 4.21539 118.626 5.5327C119.213 6.82073 119.507 8.28441 119.507 9.92372C119.507 13.1145 117.877 16.3054 114.619 19.4962L108.41 25.5558H118.934C119.639 25.5558 119.991 25.8924 119.991 26.5657V30.2981C119.991 31.0007 119.639 31.3519 118.934 31.3519H100.395ZM27.7283 15.7945C24.8935 12.7289 21.4599 11.1962 17.4275 11.1962C13.2353 11.1962 10.0013 12.6493 7.72558 15.5556V1.52186C7.72558 0.566371 7.24648 0.0886285 6.28826 0.0886285H1.37743C0.459143 0.0886285 0 0.566371 0 1.52186V40.458C0 41.4135 0.459143 41.8912 1.37743 41.8912H6.28826C7.24648 41.8912 7.72558 41.4135 7.72558 40.458V38.3679C10.0013 41.2741 13.2353 42.7273 17.4275 42.7273C21.4599 42.7273 24.8935 41.2144 27.7283 38.1887C30.6029 35.1232 32.0402 31.3809 32.0402 26.9617C32.0402 22.5426 30.6029 18.8202 27.7283 15.7945ZM20.2422 34.3668C19.0045 35.0436 17.5872 35.382 15.9902 35.382C13.5946 35.382 11.6183 34.6056 10.0612 33.053C8.50413 31.4605 7.72558 29.4301 7.72558 26.9617C7.72558 24.4934 8.50413 22.4829 10.0612 20.9302C11.6183 19.3377 13.5946 18.5415 15.9902 18.5415C18.3857 18.5415 20.362 19.3377 21.9191 20.9302C23.5161 22.4829 24.3146 24.4934 24.3146 26.9617C24.3146 28.594 23.9553 30.0671 23.2366 31.3809C22.518 32.6548 21.5198 33.6501 20.2422 34.3668ZM59.7072 14.3612C57.9105 12.2512 55.5948 11.1962 52.7601 11.1962C49.0471 11.1962 46.3321 12.4901 44.6153 15.0778V13.4655C44.6153 12.51 44.1362 12.0322 43.178 12.0322H38.2672C37.3489 12.0322 36.8897 12.51 36.8897 13.4655V40.458C36.8897 41.4135 37.3489 41.8912 38.2672 41.8912H43.178C44.1362 41.8912 44.6153 41.4135 44.6153 40.458V24.573C44.6153 22.463 45.0944 20.9103 46.0526 19.915C47.0508 18.8799 48.3683 18.3623 50.0053 18.3623C51.4426 18.3623 52.5805 18.8003 53.4189 19.6761C54.2973 20.5122 54.7364 21.7463 54.7364 23.3786V40.458C54.7364 41.4135 55.2155 41.8912 56.1738 41.8912H61.0247C61.9829 41.8912 62.462 41.4135 62.462 40.458V22.7815C62.462 19.2382 61.5437 16.4314 59.7072 14.3612ZM94.5158 40.1594C94.8751 40.6371 94.9749 41.0552 94.8152 41.4135C94.6555 41.732 94.2962 41.8912 93.7372 41.8912H87.988C87.2693 41.8912 86.7104 41.6125 86.3111 41.0552L76.4894 28.395V40.458C76.4894 41.4135 76.0103 41.8912 75.0521 41.8912H70.1413C69.223 41.8912 68.7639 41.4135 68.7639 40.458V1.52186C68.7639 0.566371 69.223 0.0886285 70.1413 0.0886285H75.0521C76.0103 0.0886285 76.4894 0.566371 76.4894 1.52186V25.1702L85.7122 12.8683C86.1115 12.3109 86.6704 12.0322 87.3891 12.0322H93.1384C93.7372 12.0322 94.1165 12.2114 94.2762 12.5697C94.4359 12.8882 94.3361 13.2863 93.9768 13.764L83.9156 26.8423L94.5158 40.1594ZM100.219 36.0955C99.7329 36.0955 99.3386 36.4887 99.3386 36.9738V41.0135C99.3386 41.4985 99.7329 41.8917 100.219 41.8917H119.119C119.606 41.8917 120 41.4985 120 41.0135V36.9738C120 36.4887 119.606 36.0955 119.119 36.0955H100.219Z" fill="#1B1D21"/>
+                            </svg>                        
+                          </span>
+                        </div>
+                      </a>
+                    </div>
+                    <!--Aside-Menu-->
+                    <div class="aside-menu pe-2 my-auto flex-column-fluid">
+                      <nav class="flex-grow-1 h-100" id="page-navbar">
+                        <!--:Sidebar nav-->
+                        <ul class="nav flex-column collapse-group collapse d-flex pt-4">
+                          <li class="nav-item">
+                            <a href="index.html"
+                              class="nav-link d-flex align-items-center text-truncate ">
+                              <span class="sidebar-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                  <path d="M12.97 2.59a1.5 1.5 0 00-1.94 0l-7.5 6.363A1.5 1.5 0 003 10.097V19.5A1.5 1.5 0 004.5 21h4.75a.75.75 0 00.75-.75V14h4v6.25c0 .414.336.75.75.75h4.75a1.5 1.5 0 001.5-1.5v-9.403a1.5 1.5 0 00-.53-1.144l-7.5-6.363z">
+                                  </path>
+                                </svg>
+                              </span>
+                              <span class="sidebar-text">Dashboard</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="transfers.html"
+                              class="nav-link d-flex align-items-center text-truncate ">
+                              <span class="sidebar-icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M1.592 2.712L2.38 7.25h4.87a.75.75 0 110 1.5H2.38l-.788 4.538L13.929 8 1.592 2.712zM.989 8L.064 2.68a1.341 1.341 0 011.85-1.462l13.402 5.744a1.13 1.13 0 010 2.076L1.913 14.782a1.341 1.341 0 01-1.85-1.463L.99 8z">
+                                  </path>
+                                </svg>
+                              </span>
+                              <span class="sidebar-text">Transfers</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="cards.html"
+                              class="nav-link d-flex align-items-center text-truncate ">
+                              <span class="sidebar-icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                  <path d="M10.75 9a.75.75 0 000 1.5h1.5a.75.75 0 000-1.5h-1.5z">
+                                  </path>
+                                  <path fill-rule="evenodd" d="M0 3.75C0 2.784.784 2 1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0114.25 14H1.75A1.75 1.75 0 010 12.25v-8.5zm14.5 0V5h-13V3.75a.25.25 0 01.25-.25h12.5a.25.25 0 01.25.25zm0 2.75h-13v5.75c0 .138.112.25.25.25h12.5a.25.25 0 00.25-.25V6.5z">
+                                  </path>
+                                </svg>
+                              </span>
+                              <span class="sidebar-text">Cards</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="invoices.html"
+                              class="nav-link d-flex align-items-center text-truncate ">
+                              <span class="sidebar-icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M2.5 1.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v7.736a.75.75 0 101.5 0V1.75A1.75 1.75 0 0011.25 0h-8.5A1.75 1.75 0 001 1.75v11.5c0 .966.784 1.75 1.75 1.75h3.17a.75.75 0 000-1.5H2.75a.25.25 0 01-.25-.25V1.75zM4.75 4a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5zM4 7.75A.75.75 0 014.75 7h2a.75.75 0 010 1.5h-2A.75.75 0 014 7.75zm11.774 3.537a.75.75 0 00-1.048-1.074L10.7 14.145 9.281 12.72a.75.75 0 00-1.062 1.058l1.943 1.95a.75.75 0 001.055.008l4.557-4.45z">
+                                  </path>
+                                </svg>
+                              </span>
+                              <span class="sidebar-text">Invoices</span><span
+                              class="badge rounded-pill bg-danger small lh-1 ms-3">10+</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="contacts.html"
+                              class="nav-link d-flex align-items-center text-truncate ">
+                              <span class="sidebar-icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M5.5 3.5a2 2 0 100 4 2 2 0 000-4zM2 5.5a3.5 3.5 0 115.898 2.549 5.507 5.507 0 013.034 4.084.75.75 0 11-1.482.235 4.001 4.001 0 00-7.9 0 .75.75 0 01-1.482-.236A5.507 5.507 0 013.102 8.05 3.49 3.49 0 012 5.5zM11 4a.75.75 0 100 1.5 1.5 1.5 0 01.666 2.844.75.75 0 00-.416.672v.352a.75.75 0 00.574.73c1.2.289 2.162 1.2 2.522 2.372a.75.75 0 101.434-.44 5.01 5.01 0 00-2.56-3.012A3 3 0 0011 4z">
+                                  </path>
+                                </svg>
+                              </span>
+                              <span class="sidebar-text">Contacts</span>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="history.html"
+                              class="nav-link d-flex align-items-center text-truncate ">
+                              <span class="sidebar-icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                  <path fill-rule="evenodd" d="M1.75 2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-6.5zm4 5a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5h-7.5zm0 5a.75.75 0 000 1.5h7.5a.75.75 0 000-1.5h-7.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z">
+                                  </path>
+                                  <path d="M13.314 4.918L11.07 2.417A.25.25 0 0111.256 2h4.488a.25.25 0 01.186.417l-2.244 2.5a.25.25 0 01-.372 0z">
+                                  </path>
+                                </svg>
+                              </span>
+                              <span class="sidebar-text">History</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                    <!--Aside-footer-->
+                    <footer class="aside-footer position-relative p-3">
+                      <div class="p-3 bg-secondary text-white rounded-3 position-relative overflow-hidden">
+                        <div class="position-relative">
+                          <p class="mb-0 pb-2">Get the best out of bnk². Upgrade your plan to Pro and onboard unlimited freelancers.</p>
+                          <!--Action button-->
+                          <a href="#!.html" class="btn rounded-pill btn-white text-truncate btn-sm">Upgrade to Pro</a>
+                        </div>
+                      </div>
+                    </footer>
+                  </div>
+                </aside>
+                <!--///////////Page Sidebar End///////////////-->
+
+                <!--///Sidebar close button for 991px or below devices///-->
+                <div class="sidebar-close d-lg-none">
+                  <a href="#"></a>
+                </div>
+                <!--///.Sidebar close end///-->
+
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                <div class="d-print-none">
+                    <!--//page-header//-->
+                    <header class="navbar py-0 page-header border-bottom navbar-expand navbar-light px-4">
+                      <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <div class="d-flex align-items-center flex-no-wrap text-truncate">
+                          <!--Sidebar-icon-->
+                          <span class="sidebar-icon bg-primary rounded-circle size-40 text-white">
+                            <svg width="16" height="18" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="0.399994" width="4" height="12" fill="white"/>
+                              <path d="M5.89998 9.6C7.1465 9.6 8.34196 9.09429 9.22338 8.19411C10.1048 7.29394 10.6 6.07304 10.6 4.8C10.6 3.52696 10.1048 2.30606 9.22338 1.40589C8.34196 0.505713 7.1465 2.4787e-07 5.89998 0L5.89998 4.8L5.89998 9.6Z" fill="white"/>
+                              </svg> 
+                          </span>
+                        </div>
+                      </a>
+                      <ul class="navbar-nav d-flex align-items-center h-100">
+                        <li class="nav-item d-none d-lg-flex flex-column h-100 me-lg-2 align-items-center justify-content-center">
+                          <a href="javascript:void(0)"
+                            class="sidebar-trigger nav-link rounded-3 size-35 d-flex align-items-center justify-content-center p-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" width="16" height="16">
+                              <path fill-rule="evenodd"
+                                d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z">
+                              </path>
+                            </svg>
+                          </a>
+                        </li>
+                        <li class="nav-item d-flex flex-column me-lg-2 h-100 justify-content-center dropdown">
+                          <a href="javascript:void(0)" data-bs-toggle="dropdown"
+                            class="d-flex align-items-center justify-content-center nav-link size-35 p-0 rounded-3"
+                            data-bs-auto-close="outside" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                              <path fill-rule="evenodd"
+                                d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z">
+                              </path>
+                            </svg>
+                          </a>
+
+                          <!--Search dropdown menu-->
+                          <div class="dropdown-menu p-0 dropdown-menu-sm overflow-hidden mt-0">
+
+                            <!--Search form-->
+                            <form>
+                              <div class="d-flex align-items-center p-1 border-bottom ps-4">
+                                <div class="text-muted">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                      d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z">
+                                    </path>
+                                  </svg>
+                                </div>
+                                <input type="text" autofocus class="form-control bg-transparent rounded-0 py-3 ps-2 border-0 shadow-none"
+                                  placeholder="Search everything...">
+                              </div>
+                            </form>
+
+                            <!--Recently searched-->
+
+
+                            <h6 class="d-block dropdown-header pb-0 pt-3">
+                              <i class="fas fa-level-up-alt opacity-50 align-middle me-2"></i>
+                              Top searches
+                            </h6>
+                            <div class="p-3 d-flex flex-wrap align-items-center">
+                              <!--Recently searched item-->
+                              <a href="#" class="badge bg-light border text-dark px-3 py-2 me-2 mb-2">
+                                Campaign reports
+                              </a>
+                              <a href="#" class="badge bg-light border text-dark px-3 py-2 me-2 mb-2">
+                                Project #4535
+                              </a>
+                              <a href="#" class="badge bg-light border text-dark px-3 py-2 me-2 mb-2">
+                                Chat
+                              </a>
+                              <a href="#" class="badge bg-light border text-dark px-3 py-2 me-2 mb-2">
+                                Tasks
+                              </a>
+                              <a href="#" class="badge bg-light border text-dark px-3 py-2 me-2 mb-2">
+                                Affiliates
+                              </a>
+                              <a href="#" class="badge bg-light border text-dark px-3 py-2 me-2 mb-2">
+                                Faqs
+                              </a>
+                              <a href="#" class="badge bg-light border text-dark px-3 py-2 me-2 mb-2">
+                                Inbox
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item d-flex flex-column h-100 justify-content-center dropdown">
+                          <a href="#" data-bs-toggle="dropdown"
+                            class="dropdown-toggle nav-link py-1 px-2 d-flex align-items-center justify-content-center p-0">
+                            Eng
+                          </a>
+                          <div class="dropdown-menu overflow-hidden mt-0">
+                            <a href="#!" class="dropdown-item active">
+                              English
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Spanish
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              French
+                            </a>
+                          </div>
+                        </li>
+                      </ul>
+                      <ul class="navbar-nav ms-auto d-flex align-items-center h-100">
+                        <li class="nav-item dropdown d-flex align-items-center justify-content-center flex-column h-100 me-lg-1">
+                          <div class="switch_modes">
+                            <a href="#" class="mode_dark nav-link">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                <path fill-rule="evenodd"
+                                  d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z"
+                                  fill="currentColor"></path>
+                              </svg>
+                            </a>
+                            <a href="#" class="mode_light active nav-link">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                                <path fill-rule="evenodd"
+                                  d="M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z"
+                                  fill="currentColor"></path>
+                              </svg>
+                            </a>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown d-flex align-items-center justify-content-center flex-column h-100 me-lg-1">
+                          <a href="#offcanvasChat" data-bs-toggle="offcanvas"
+                            class="nav-link position-relative p-0 size-35 d-flex align-items-center justify-content-center rounded-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                              <g fill-rule="evenodd">
+                                <path
+                                  d="M3.25 9a.75.75 0 01.75.75c0 2.142.456 3.828.733 4.653a.121.121 0 00.05.064.207.207 0 00.117.033h1.31c.085 0 .18-.042.258-.152a.448.448 0 00.075-.366A16.74 16.74 0 016 9.75a.75.75 0 011.5 0c0 1.588.25 2.926.494 3.85.293 1.113-.504 2.4-1.783 2.4H4.9c-.686 0-1.35-.41-1.589-1.12A16.42 16.42 0 012.5 9.75.75.75 0 013.25 9z"
+                                  fill="currentColor"></path>
+                                <path
+                                  d="M0 6a4 4 0 014-4h2.75a.75.75 0 01.75.75v6.5a.75.75 0 01-.75.75H4a4 4 0 01-4-4zm4-2.5a2.5 2.5 0 000 5h2v-5H4z"
+                                  fill="currentColor"></path>
+                                <path
+                                  d="M15.59.082A.75.75 0 0116 .75v10.5a.75.75 0 01-1.189.608l-.002-.001h.001l-.014-.01a5.829 5.829 0 00-.422-.25 10.58 10.58 0 00-1.469-.64C11.576 10.484 9.536 10 6.75 10a.75.75 0 110-1.5c2.964 0 5.174.516 6.658 1.043.423.151.787.302 1.092.443V2.014c-.305.14-.669.292-1.092.443C11.924 2.984 9.713 3.5 6.75 3.5a.75.75 0 110-1.5c2.786 0 4.826-.484 6.155-.957.665-.236 1.154-.47 1.47-.64a5.82 5.82 0 00.421-.25l.014-.01a.75.75 0 01.78-.061zm-.78.06zm.44 11.108l-.44.607.44-.607z"
+                                  fill="currentColor"></path>
+                              </g>
+                            </svg>
+                            <span
+                              class="badge p-0 size-5 rounded-circle d-flex align-items-center justify-content-center position-absolute end-0 top-0 mt-1 me-1 bg-success anim-scale"></span>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown d-flex align-items-center justify-content-center flex-column h-100 me-2 me-lg-4">
+                          <a href="#"
+                            class="nav-link p-0 position-relative size-35 d-flex align-items-center justify-content-center rounded-3"
+                            aria-expanded="false" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+                              <path fill-rule="evenodd"
+                                d="M8 1.5c-.997 0-1.895.416-2.534 1.086A.75.75 0 014.38 1.55 5 5 0 0113 5v2.373a.75.75 0 01-1.5 0V5A3.5 3.5 0 008 1.5zM4.182 4.31L1.19 2.143a.75.75 0 10-.88 1.214L3 5.305v2.642a.25.25 0 01-.042.139L1.255 10.64A1.518 1.518 0 002.518 13h11.108l1.184.857a.75.75 0 10.88-1.214l-1.375-.996a1.196 1.196 0 00-.013-.01L4.198 4.321a.733.733 0 00-.016-.011zm7.373 7.19L4.5 6.391v1.556c0 .346-.102.683-.294.97l-1.703 2.556a.018.018 0 00-.003.01.015.015 0 00.005.012.017.017 0 00.006.004l.007.001h9.037zM8 16a2 2 0 001.985-1.75c.017-.137-.097-.25-.235-.25h-3.5c-.138 0-.252.113-.235.25A2 2 0 008 16z"
+                                fill="currentCOlor"></path>
+                            </svg>
+                            <span
+                              class="size-5 rounded-circle d-flex align-items-center justify-content-center position-absolute end-0 top-0 mt-2 me-1 bg-danger small"></span>
+                          </a>
+
+
+                          <div class="dropdown-menu mt-0 p-0 overflow-hidden dropdown-menu-end dropdown-menu-sm">
+                            <div
+                              class="d-flex p-3 justify-content-between align-items-center border border-top-0 border-start-0 border-end-0">
+                              <h5 class="me-3 mb-0">Notifications</h5>
+                              <div class="flex-shrink-0">
+                                <a href="#!" class="btn btn-primary btn-sm">View All</a>
+                              </div>
+                            </div>
+                            <div class="height-290" data-simplebar>
+                              <div class="list-group list-group-flush mb-0">
+                                <div class="list-group-item px-3 text-muted small">New</div>
+                                <!--//Notification item start//-->
+                                <a href="#" class="list-group-item list-group-item-action px-4 d-flex align-items-center">
+                                  <div class="d-block me-3">
+                                    <div class="avatar avatar-status status-online">
+                                      <img src="assets/media/avatars/01.jpg" class="img-fluid rounded-circle w-auto" alt="">
+                                    </div>
+                                  </div>
+
+                                  <div class="flex-grow-1 flex-wrap pe-3">
+                                    <span class="mb-0 d-block"><strong>Adam Danely</strong> assigned
+                                      a task to
+                                      you <strong>#PI-392</strong></span>
+                                    <small class="text-muted">Just now</small>
+                                  </div>
+
+                                  <!--Unread mark-->
+                                  <span class="position-absolute end-0 unread_notification text-primary top-50 translate-middle-y me-3">
+                                    <i class="fas fa-circle small"></i>
+                                  </span>
+                                </a>
+                                <!--//Notification item start//-->
+                                <a href="#" class="list-group-item list-group-item-action px-4 d-flex align-items-center">
+                                  <div class="d-block me-3">
+                                    <div class="avatar avatar-status status-offline">
+                                      <img src="assets/media/avatars/06.jpg" class="img-fluid rounded-circle w-auto" alt="">
+                                    </div>
+                                  </div>
+
+                                  <div class="flex-grow-1 flex-wrap pe-3">
+                                    <span class="mb-0 d-block"><strong>Vivianna Kiser
+                                      </strong> just posted <span>"Lorem ipsum is placeholder text
+                                        used in the graphic, print,
+                                        and industries.
+                                        "</span></span>
+                                    <small class="text-muted">2h Ago</small>
+                                  </div>
+
+                                   <!--Unread mark-->
+                                   <span class="position-absolute end-0 unread_notification text-primary top-50 translate-middle-y me-3">
+                                    <i class="fas fa-circle small"></i>
+                                  </span>
+                                </a>
+                                <div class="px-3 list-group-item text-muted small">Earlier</div>
+                                <!--//Notification item start//-->
+                                <a href="#" class="list-group-item list-group-item-action px-4 d-flex align-items-center">
+                                  <span class="d-block me-3">
+                                    <span
+                                      class="d-flex align-items-center justify-content-center lh-1 size-50 bg-tint-success text-success rounded-circle">
+                                      <i class="fas fa-unlock-alt"></i>
+                                    </span>
+                                  </span>
+
+                                  <div class="flex-grow-1 flex-wrap pe-3">
+                                    <span class="mb-0 d-block"><strong>Updated</strong> Your account
+                                      password updated
+                                      succuessfully</span>
+                                    <small class="text-muted">2h Ago</small>
+                                  </div>
+                                </a>
+                                <!--//Notification item start//-->
+                                <a href="#" class="list-group-item list-group-item-action px-4 d-flex align-items-center">
+                                  <span class="d-block me-3">
+                                    <span
+                                      class="d-flex align-items-center justify-content-center lh-1 size-50 bg-tint-danger text-danger rounded-circle">
+                                      <i class="fas fa-percent"></i>
+                                    </span>
+                                  </span>
+
+                                  <div class="flex-grow-1 flex-wrap pe-3">
+                                    <span class="mb-0 d-block"><strong>Pro discount</strong> Upgrade
+                                      to pro plan with 30%
+                                      discount, Apply coupon <span class="badge bg-primary">PRO30</span></span>
+                                    <small class="text-muted">2h Ago</small>
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="nav-item dropdown d-flex align-items-center justify-content-center flex-column h-100">
+                          <a href="#"
+                            class="nav-link dropdown-toggle rounded-pill p-1 lh-1 pe-1 pe-md-2 d-flex align-items-center justify-content-center"
+                            aria-expanded="false" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                            <div class="d-flex align-items-center">
+
+                              <!--Avatar with status-->
+                              <div class="avatar-status status-online me-1 avatar sm">
+                                <img src="assets/media/avatars/01.jpg" class="rounded-circle img-fluid" alt="">
+                              </div>
+                            </div>
+                          </a>
+
+                          <div class="dropdown-menu mt-0 p-0 dropdown-menu-end overflow-hidden">
+                            <!--User meta-->
+                            <div class="position-relative overflow-hidden p-4 bg-gradient-dark text-white">
+                              <div class="position-relative">
+                                <h5 class="mb-1">Adam Milne</h5>
+                                <p class="text-muted small mb-0 lh-1">Marketing head</p>
+                              </div>
+                            </div>
+                            <div class="p-2">
+                              <a href="profile.html" class="dropdown-item"> 
+                                <i class="fas fa-user opacity-50 align-middle me-2"></i>Profile</a>
+                              <a href="account-general.html" class="dropdown-item">
+                                <i class="fas fa-cogs opacity-50 align-middle me-2"></i>Settings</a>
+                              <a href="page-tasks.html" class="dropdown-item">
+                                <i class="fas fa-list opacity-50 align-middle me-2"></i>Tasks</a>
+                              <hr class="mt-3 mb-1">
+                              <a href="page-auth-signin.html" class="dropdown-item d-flex align-items-center">
+                                <i class="fas fa-sign-out-alt opacity-50 align-middle me-2"></i>
+                                Sign out
+                              </a>
+                            </div>
+                          </div>
+                        </li>
+                        <li
+                          class="nav-item dropdown ms-1 ms-lg-3 d-flex d-lg-none align-items-center justify-content-center flex-column h-100">
+                          <a href="#"
+                            class="nav-link sidebar-trigger-lg-down size-35 p-0 d-flex align-items-center justify-content-center rounded-3">
+                            <i class="fas fa-bars"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </header>
+                    <!--Main Header End-->
+
+
+                    <!--//Chat offcanvas start//-->
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasChat" aria-labelledby="offcanvasChatLabel">
+
+                      <!--Chat header-->
+                      <div class="offcanvas-header height-70 d-flex align-items-center justify-content-between border-bottom shadow-none">
+                        <div>
+                          <h5 class="offcanvas-title mb-0 lh-1" id="offcanvasChatLabel">Adam Voges</h5>
+                          <div class="d-flex align-items-center">
+                            <span class="size-5 border border-3 rounded-circle border-success me-2 d-block"></span>Online
+                          </div>
+                        </div>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      </div>
+
+                      <!--Chat body-->
+                      <div class="offcanvas-body p-0 flex-row-fluid">
+                        <div class="d-flex p-3 flex-column-reverse h-100" style="overflow-y: auto;">
+                          <div class="flex-shrink-0 w-100">
+       
+                                                                    <!--Alert-->
+                                                                    <div
+                                                                        class="alert border-0 shadow bg-gradient-primary text-white p-5 mb-4">
+                                                                        <h5>Get more access with our paid plans</h5>
+                                                                        <p class="text-truncate">
+                                                                            Duis aute irure
+                                                                            dolor in voluptate velit esse cillum dolore eu
+                                                                            fugiat nulla pariatur.
+                                                                        </p>
+                                                                        <a href="#!" class="btn btn-white">See upgrade options</a>
+                                                                    </div>
+                                                                    <!--Chat divider with day/month-->
+                                                                    <div class="d-flex mb-4 align-items-center justify-content-center">
+                                                                        <div class="text-muted small">
+                                                                            Today, 12:10PM</div>
+                                                                    </div>
+
+                                                                    <!--User chat box-->
+                                                                    <div class="c_message_in c_message_box mb-4">
+
+                                                                        <!--chat message avatar-->
+                                                                        <div class="c_message_avatar">
+                                                                            <img src="assets/media/avatars/03.jpg" class="" alt="">
+                                                                        </div>
+
+                                                                        <div class="flex-grow-1">
+                                                                            <!--chat-message-and-action-->
+                                                                            <div class="c_message_content d-flex align-items-center"
+                                                                                data-bs-toggle="tooltip" data-bs-placement="left"
+                                                                                title="12:10PM">
+                                                                                <span class="c_message-text">Hi Adam</span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--chat-message-and-action-->
+                                                                            <div class="c_message_content d-flex align-items-center"
+                                                                                data-bs-toggle="tooltip" data-bs-placement="left"
+                                                                                title="12:10PM">
+                                                                                <span class="c_message-text">I checked your admin theme, It
+                                                                                    looks awesome! I want to customize few layouts, Are you
+                                                                                    available for customization</span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--chat-message-and-action-->
+                                                                            <div class="c_message_content d-flex align-items-center"
+                                                                                data-bs-toggle="tooltip" data-bs-placement="left"
+                                                                                title="12:10PM">
+                                                                                <span class="c_message-text">If Yes, Please share your
+                                                                                    skype, So we go through details</span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <!--Chat messages self-->
+                                                                    <div class="c_message_out c_message_box mb-4">
+
+                                                                        <!--chat message avatar-->
+                                                                        <div class="c_message_avatar">
+                                                                            <img src="assets/media/avatars/01.jpg" class="" alt="">
+                                                                        </div>
+                                                                        <div class="flex-grow-1">
+                                                                            <!--chat-message-and-action-->
+                                                                            <div class="c_message_content d-flex align-items-center"
+                                                                                data-bs-toggle="tooltip" data-bs-placement="right"
+                                                                                title="12:10PM">
+                                                                                <span class="c_message-text">Hi Adam</span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+
+                                                                            <!--chat-message-and-action-->
+                                                                            <div class="c_message_content d-flex align-items-center"
+                                                                                data-bs-toggle="tooltip" data-bs-placement="right"
+                                                                                title="12:33PM">
+                                                                                <span class="c_message-text">I would love to work with
+                                                                                    you</span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--chat-message-and-action-->
+                                                                            <div class="c_message_content d-flex align-items-center"
+                                                                                data-bs-toggle="tooltip" data-bs-placement="right"
+                                                                                title="12:33PM">
+                                                                                <span class="c_message-text">Here is the demo of link with
+                                                                                    chat
+                                                                                    <span class="d-block pt-2">
+                                                                                        <a href="#!" class="c_message_link">skype.123</a>
+                                                                                    </span>
+                                                                                </span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                    <!--User chat box-->
+                                                                    <div class="c_message_in c_message_box mb-4">
+
+                                                                        <!--chat message avatar-->
+                                                                        <div class="c_message_avatar">
+                                                                            <img src="assets/media/avatars/03.jpg" class="" alt="">
+                                                                        </div>
+
+                                                                        <div class="flex-grow-1">
+                                                                            <!--chat-message-and-action-->
+                                                                            <div class="c_message_content d-flex align-items-center"
+                                                                                data-bs-toggle="tooltip" data-bs-placement="left"
+                                                                                title="13:02PM">
+                                                                                <span class="c_message-text">Thanks for your response</span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <!--chat-message-and-action-->
+                                                                            <div class="c_message_content d-flex align-items-center"
+                                                                                data-bs-toggle="tooltip" data-bs-placement="left"
+                                                                                title="13:04PM">
+                                                                                <span class="c_message-text">Here are some images files for
+                                                                                    chat demo
+                                                                                    <span class="d-flex py-2 flex-wrap">
+                                                                                        <!--File-->
+                                                                                        <a href="#!"
+                                                                                            class="card-hover me-2 position-relative width-90">
+                                                                                            <span
+                                                                                                class="hover-image mb-1 position-relative d-block overflow-hidden rounded-3">
+                                                                                                <img src="assets/media/900x600/2.jpg"
+                                                                                                    class="img-fluid" alt="">
+                                                                                                <span
+                                                                                                    class="hover-image-overlay position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center text-white">
+                                                                                                    <span>
+                                                                                                      <i class="fas fa-download small ms-1"></i>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+
+                                                                                            <!--File description-->
+                                                                                            <span class="d-block text-body text-truncate">
+                                                                                                photo-9304157018321
+                                                                                            </span>
+                                                                                            <span class="d-block text-muted text-truncate">
+                                                                                                257KB
+                                                                                            </span>
+                                                                                        </a>
+                                                                                        <!--File-->
+                                                                                        <a href="#!"
+                                                                                            class="card-hover position-relative width-90">
+                                                                                            <span
+                                                                                                class="hover-image position-relative d-block mb-1 overflow-hidden rounded-3">
+                                                                                                <img src="assets/media/900x600/4.jpg"
+                                                                                                    class="img-fluid" alt="">
+                                                                                                <span
+                                                                                                    class="hover-image-overlay position-absolute start-0 top-0 w-100 h-100 d-flex justify-content-center align-items-center text-white">
+                                                                                                    <span>
+                                                                                                      <i class="fas fa-download small ms-1"></i>
+                                                                                                    </span>
+                                                                                                </span>
+                                                                                            </span>
+
+                                                                                            <!--File description-->
+                                                                                            <span class="d-block text-body text-truncate">
+                                                                                                photo-1633113088983
+                                                                                            </span>
+                                                                                            <span class="d-block text-muted text-truncate">
+                                                                                                300KB
+                                                                                            </span>
+                                                                                        </a>
+                                                                                    </span>
+                                                                                </span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <!--chat-message-and-action-->
+                                                                            <div
+                                                                                class="c_message_content c_message-typing d-flex align-items-center">
+                                                                                <span class="c_message-text">
+                                                                                    <span class="typing">
+                                                                                        <span class="dot"></span>
+                                                                                        <span class="dot"></span>
+                                                                                        <span class="dot"></span>
+                                                                                    </span>
+                                                                                </span>
+
+                                                                                <!--Actions-->
+                                                                                <div class="c_message_actions d-flex align-items-center">
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="far fa-smile small"></i>
+                                                                                    </a>
+                                                                                    <a href="#!" class="c_action">
+                                                                                        <i class="fas fa-reply small"></i>
+                                                                                    </a>
+                                                                                    <div class="dropdown">
+                                                                                        <a href="#" class="c_action"
+                                                                                            data-bs-toggle="dropdown">
+                                                                                            <i class="fas fa-ellipsis-v small"></i>
+                                                                                        </a>
+                                                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Remove
+                                                                                            </a>
+                                                                                            <a href="#!" class="dropdown-item">
+                                                                                                Forward
+                                                                                            </a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--Chat footer-->
+                      <div class="offcanvas-footer mt-auto p-2 border-top shadow position-relative">
+                        <div class="position-relative p-4">
+                          <form>
+                            <input type="text" placeholder="Type here..."
+                              class="form-control bg-transparent ps-2 pe-5 border-0 shadow-none rounded-0 position-absolute w-100 h-100 start-0 top-0">
+                            <button type="submit"
+                              class="btn p-0 btn-primary rounded-pill d-flex align-items-center justify-content-center size-35 position-absolute end-0 top-50 translate-middle-y">
+                              <i class="fas fa-paper-plane"></i>
+                            </button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+
+
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar p-4 pb-0 d-print-none">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8 mb-4 mb-lg-0">
+                                    <h3 class="mb-2">Invoice</h3>
+
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="/invoices.html">Invoices</a></li>
+                                            <li class="breadcrumb-item active">#9-0004</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+                    <!--//Page content//-->
+                    <div class="content p-4 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card py-5 card-body" id="invoicePrint">
+                                        <!--Invoive Header-->
+                                        <div class="d-flex justify-content-sm-between flex-column flex-sm-row mb-5">
+                                            <div class="mb-4 mb-sm-0">
+                                                <h3 class="mb-3">Invoice</h3>
+                                                <ul class="list-unstyled d-table mb-0">
+                                                    <li
+                                                        class="d-flex align-items-center border-bottom border-dashed pb-1 mb-1">
+                                                        <span class="pe-3 small">Invoice Id :</span>
+                                                        <span class="mb-0 flex-grow-1 fw-bold text-end">#9-0004</span>
+                                                    </li>
+                                                    <li
+                                                        class="d-flex align-items-center border-bottom border-dashed pb-1 mb-1">
+                                                        <span class="pe-3 small">Invoice Date :</span>
+                                                        <span
+                                                            class="mb-0 fw-bold flex-grow-1 text-end">24-Sep-2021</span>
+                                                    </li>
+                                                    <li class="d-flex align-items-center">
+                                                        <span class="pe-3 small">Total Due :</span>
+                                                        <span
+                                                            class="mb-0 fw-bold flex-grow-1 text-end">$18,750.00</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="ms-sm-auto text-sm-end">
+                                                <svg class="mb-3 text-body" width="48" height="48" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"><title>Dropbox</title><path d="M6 1.807L0 5.629l6 3.822 6.001-3.822L6 1.807zM18 1.807l-6 3.822 6 3.822 6-3.822-6-3.822zM0 13.274l6 3.822 6.001-3.822L6 9.452l-6 3.822zM18 9.452l-6 3.822 6 3.822 6-3.822-6-3.822zM6 18.371l6.001 3.822 6-3.822-6-3.822L6 18.371z" fill="currentColor"/></svg>
+                                                <p class="mb-0">
+                                                    info@dropbox.com
+                                                </p>
+                                                
+                                                <hr>
+                                                <small class="text-muted">Bill to</small>
+                                                <p class="mb-0">
+                                                    Adam Voges<br>
+                                                    0123 Lorem Street<br>
+                                                    Philadelphia, PA 19111<br>
+                                                    +01 123 456 78
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-12">
+                                                <!--Table-->
+                                                <div class="table-responsive mb-4">
+                                                    <table class="table table-borderless mb-4">
+                                                        <thead class="small">
+                                                            <tr>
+                                                                <th style="min-width: 300px;">Description</th>
+                                                                <th>Hours</th>
+                                                                <th>Rate</th>
+                                                                <th class="text-end">Amount</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="align-middle">
+                                                                <td>
+                                                                    <h5 class="mb-1">
+                                                                        Responsive Design
+                                                                    </h5>
+                                                                    <p class="small d-print-none mb-0">
+                                                                        Lorem ipsum is placeholder text commonly used in
+                                                                        the graphic and other industries.
+                                                                    </p>
+                                                                </td>
+                                                                <td class="text-reset">40</td>
+                                                                <td class="text-reset">$50.00</td>
+                                                                <td class="text-end width-90">$2000.00</td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <td>
+                                                                    <h5 class="mb-1">
+                                                                        Logo Design
+                                                                    </h5>
+                                                                    <p class="small d-print-none mb-0">
+                                                                        Lorem ipsum is placeholder text commonly used in
+                                                                        the graphic and other industries.
+                                                                    </p>
+                                                                </td>
+                                                                <td class="text-reset">20</td>
+                                                                <td class="text-reset">$30.00</td>
+                                                                <td class="text-end width-90">$600.00</td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <td>
+                                                                    <h5 class="mb-1">
+                                                                        Prototype & Design
+                                                                    </h5>
+                                                                    <p class="small d-print-none mb-0">
+                                                                        Lorem ipsum is placeholder text commonly used in
+                                                                        the graphic and other industries.
+                                                                    </p>
+                                                                </td>
+                                                                <td class="text-reset">61</td>
+                                                                <td class="text-reset">$50.00</td>
+                                                                <td class="text-end width-90">$3050.00</td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <td>
+                                                                    <h5 class="mb-1">
+                                                                        CMS Development
+                                                                    </h5>
+                                                                    <p class="small d-print-none mb-0">
+                                                                        Lorem ipsum is placeholder text commonly used in
+                                                                        the graphic and other industries.
+                                                                    </p>
+                                                                </td>
+                                                                <td class="text-reset">100</td>
+                                                                <td class="text-reset">$90.00</td>
+                                                                <td class="text-end width-90">$9000.00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table class="table table-borderless mb-4">
+                                                        <tbody>
+                                                            <tr class="align-middle">
+                                                                <td>
+                                                                    Subtotal
+                                                                </td>
+                                                                <td class="text-end fw-bold">$18650.00</td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <td>
+                                                                    Tax
+                                                                </td>
+                                                                <td class="text-end fw-bold">+ $1000.00</td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <td>
+                                                                    Discount
+                                                                </td>
+                                                                <td class="text-end fw-bold">- $1000.00</td>
+                                                            </tr>
+                                                            <tr class="align-middle">
+                                                                <td>
+                                                                    Total
+                                                                </td>
+                                                                <td class="text-end fw-bold">$18650.00</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <!--Table end-->
+                                            </div>
+                                        </div>
+                                        <div class="row d-print-none justify-content-between align-items-center">
+                                           
+                                            
+                                            <div class="col-auto me-auto">
+                                                <a href="#!" class="btn btn-primary">Pay Now</a>
+                                               </div>
+                                               <div class="col-auto">
+                                                <a class="btn btn-secondary" href="javascript:window.print()">Print <i class="fas fa-print ms-2"></i></a> 
+                                             </div>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                   <div class="d-print-none">
+                     <!--//Page-footer//-->
+                     <footer class="pb-4">
+                        <div class="container-fluid px-4">
+                          <span class="d-block lh-sm small text-muted text-end">&copy;
+                            <script>
+                              document.write(new Date().getFullYear())
+                            </script> Issuance Scheme Limited
+                          </span>
+                        </div>
+                      </footer>
+                      <!--/.Page Footer End-->
+                   </div>
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        
+        <!--////////////Theme Core scripts Start/////////////////-->
+
+        <script src="assets/js/theme.bundle.js"></script>
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+        <!--////////////Theme Core scripts End/////////////////-->
+
+
+    </body>
+
+</html>

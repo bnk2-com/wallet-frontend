@@ -1,0 +1,18 @@
+//Theme cards uses for widgets
+.card-header{
+    border-bottom:$border-width solid $border-color;
+}
+.card-footer{
+    border-top:$border-width solid $border-color;
+}
+
+.cc-number {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cc {
+border-radius: 8px;
+padding: 20px;
+}

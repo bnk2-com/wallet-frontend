@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel-Admin</title>
+
+    @@include('./partials/fonts.html')
+
+    <!--Simplebar css-->
+    <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+    <!--Choices css-->
+    <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+    <!--Main style-->
+    <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+  </head>
+
+  <body>
+     @@include('./partials/preloader.html')
+        <!--App Start-->
+    <div class="d-flex flex-column flex-root">
+      <!--Page-->
+      <div class="page d-flex flex-row flex-column-fluid">
+
+        @@include('./partials/sidebars/sidebar.html', {"page":"cards"})
+
+        <!--///////////Page content wrapper///////////////-->
+        <main class="page-content d-flex flex-column flex-row-fluid">
+
+
+          @@include('./partials/header/header-default.html')
+
+          <!--//Page Toolbar//-->
+          <div class="toolbar pb-0 p-4">
+            <div class="position-relative container-fluid px-0">
+              <div class="row align-items-center position-relative">
+                <div class="col-md-8 mb-4 mb-md-0">
+                  <h3 class="mb-2">Virtual Cards</h3>
+                </div>
+                <div class="col-md-4 text-md-end">
+                  <a href="#!.html" class="btn btn-success">
+                  <i class="fas fa-plus small me-2 align-middle"></i>Add Card</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Page Toolbar End//-->
+
+          <!--//Page content//-->
+          <div class="content p-4 flex-column-fluid">
+            <div class="row">
+              <!--Card-->
+              <div class="col-sm-6 col-xl-3">
+                <div class="card rounded-3 mb-4">
+                  <!-- Card - Body -->
+                  <div class="card-body mt-0">
+                    <span class="badge badge-pill bg-tint-success text-success">Active</span>
+                    <div class="row align-items-stretch mt-3">
+                      <div class="col">
+                        <h5 class="mb-1">
+                          <a class="stretched-link link-dark" href="card-transactions.html">Udi Haik</a>
+                        </h5>
+                        <small class="text-muted d-block mb-2">
+                          Google Cloud Server
+                        </small>
+                        <div class="cc-number d-block mb-2">
+                          ···· ···· ···· 3087
+                        </div>
+                      </div>
+                    </div>
+                    <img src="assets/media/brand-logos/visa.svg" class="height-20 float-right w-auto me-4" alt="visa logo">
+                  </div>
+                </div>
+              </div>
+              <!--Card-->
+              <div class="col-sm-6 col-xl-3">
+                <div class="card rounded-3 mb-4">
+                  <!-- Card - Body -->
+                  <div class="card-body mt-0">
+                    <span class="badge badge-pill bg-tint-danger text-danger">Blocked</span>
+                    <div class="row align-items-stretch mt-3">
+                      <div class="col">
+                        <h5 class="mb-1">
+                          <a class="stretched-link link-dark" href="card-transactions.html">Dan Mullers</a>
+                        </h5>
+                        <small class="text-muted d-block mb-2">
+                          Google Cloud Server
+                        </small>
+                        <small class="cc-number d-block mb-2">
+                          ···· ···· ···· 4089
+                        </small>
+                      </div>
+                    </div>
+                    <img src="assets/media/brand-logos/visa.svg" class="height-20 float-right w-auto me-4" alt="visa logo">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Page content End//-->
+
+          @@include('./partials/footer.html')
+        </main>
+        <!--///////////Page content wrapper End///////////////-->
+      </div>
+    </div>
+    @@include('./partials/core-scripts.html')
+
+  </body>
+
+</html>

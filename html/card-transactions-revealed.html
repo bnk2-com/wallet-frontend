@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Panel-Admin</title>
+
+        @@include('./partials/fonts.html')
+
+        <!--Simplebar css-->
+        <link rel="stylesheet" href="assets/vendor/css/simplebar.min.css">
+
+        <!--Choices css-->
+        <link rel="stylesheet" href="assets/vendor/css/choices.min.css">
+
+        <!--Main style-->
+        <link rel="stylesheet" href="assets/css/style.min.css" id="switchThemeStyle">
+    </head>
+
+    <body>
+        @@include('./partials/preloader.html')
+        <!--App Start-->
+        <div class="d-flex flex-column flex-root bg-cover bg-no-repeat">
+            <!--Page-->
+            <div class="page d-flex flex-row flex-column-fluid">
+                @@include('./partials/sidebars/sidebar.html',{"page": "pages"} )
+
+                <!--///////////Page content wrapper///////////////-->
+                <main class="page-content d-flex flex-column flex-row-fluid">
+
+                    @@include('./partials/header/header-default.html')
+                    <!--//Page Toolbar//-->
+                    <div class="toolbar p-4 pb-0">
+                        <div class="position-relative container-fluid px-0">
+                            <div class="row align-items-center position-relative">
+                                <div class="col-md-8 mb-3 mb-lg-0">
+                                    <h3 class="mb-2">Card: Udi Haik</h3>
+                                    <p class="mb-0 text-muted">Google Cloud Servers</p>
+
+
+                                </div>
+                                <div class="col-md-4">
+                                    <nav aria-label="breadcrumb" class="d-flex justify-content-md-end">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item"><a href="#!">Cards</a></li>
+                                            <li class="breadcrumb-item active">Udi Haik</li>
+                                            <li class="breadcrumb-item active">Transactions</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page Toolbar End//-->
+
+
+                    <!--//Page content//-->
+                    <div class="content p-4 d-flex flex-column-fluid">
+                        <div class="container-fluid px-0">
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <!--Account nav-->
+                                    <!--Account nav-->
+                                    <ul class="nav nav-tabs nav-vertical mb-4 h-100">
+                                        <li class="nav-item">
+                                            <a href="card-transactions.html" class="nav-link active px-3">
+                                                <i class="far fa-list-alt width-25 align-middle"></i>Transactions
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="card-settings.html" class="nav-link  px-3">
+                                                <i class="far fa-sun width-25 align-middle"></i>Settings
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-9 h-100">
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <h5 class="mb-0">Card Details</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <ul class="list-group list-group-flush">
+                                                    <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
+                                                      <span class="text-muted small">Status</span>
+                                                      <span class="badge badge-pill lh-sm bg-success px-2 py-1">Active</span>
+                                                    </li>
+                                                    <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
+                                                        <span class="text-muted small">Card Holder</span>
+                                                        <div class="align-middle"><strong>Udi Haik</strong><button class="btn mb-2"><i class="far fa-clone small"></i></button></div>
+                                                      </li>
+                                                      <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
+                                                        <span class="text-muted small">Description</span>
+                                                        <strong>Google Cloud Server</strong>
+                                                      </li>
+                                                    <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
+                                                      <span class="text-muted small">Number</span>
+                                                      <div>
+                                                        <div class="align-middle"><strong>3424 6000 5873 3087</strong><button class="btn mb-2"><i class="far fa-clone small"></i></button></div>
+                                                      
+                                                    </div>
+                                                    </li>
+                                                    <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
+                                                        <span class="text-muted small">Expiration</span>
+                                                        <div class="align-middle"><strong>06/26</strong><button class="btn mb-2"><i class="far fa-clone small"></i></button></div>
+                                                      </li>
+                                                    <li class="list-group-item px-3 d-flex align-items-center justify-content-between">
+                                                        <span class="text-muted small">CVV</span>
+                                                        <div class="align-middle"><strong>657</strong><button class="btn mb-2"><i class="far px-0 fa-clone small"></i></button></div>
+                                                      </li>
+                                                  </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="card-footer align-items-center d-flex justify-content-end">
+                                            <a href="card-transactions.html" class="btn btn-primary" >
+                                                <i class="fas fa-eye-slash small me-1 align-middle"></i> Hide Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--card-->
+                                    <div class="card">
+
+                                        <div class="card-header border-bottom-0">
+                                            <!-- Title -->
+                                            <h5 class="mb-0">
+                                                Card History
+                                            </h5>
+                                        </div>
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless table-nowrap table-card table-sm mb-0">
+                                                <thead class="text-muted bg-body text-uppercase small">
+                                                    <tr>
+                                                        <th>Description</th>
+                                                        <th>Date</th>
+                                                        <th>Amount</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="fs-base">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="invoice.html">Google Cloud **23429348</a>
+                                                        </td>
+                                                        <td>
+                                                            <time datetime="2020-04-24">Sep. 24, 2021</time>
+                                                        </td>
+                                                        <td>
+                                                            $29.00
+                                                        </td>
+                                                        <td>
+                                                            <span
+                                                                class="badge bg-warning rounded-pill py-1 lh-sm px-2">Pending</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="invoice.html">Google Cloud **23429348</a>
+                                                        </td>
+                                                        <td>
+                                                            <time datetime="2020-03-24">Aug. 04, 2021</time>
+                                                        </td>
+                                                        <td>
+                                                            $29.00
+                                                        </td>
+                                                        <td>
+                                                            <span
+                                                                class="badge bg-danger rounded-pill py-1 lh-sm px-2">Failed</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="invoice.html">Google Cloud **23429348</a>
+                                                        </td>
+                                                        <td>
+                                                            <time datetime="2020-02-24">Jun. 13, 2021</time>
+                                                        </td>
+                                                        <td>
+                                                            $29.00
+                                                        </td>
+                                                        <td>
+                                                            <span
+                                                                class="badge bg-success rounded-pill py-1 lh-sm px-2">Paid</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <a href="invoice.html">Google Cloud **23429348</a>
+                                                        </td>
+                                                        <td>
+                                                            <time datetime="2020-01-24">Apr. 03, 2021</time>
+                                                        </td>
+                                                        <td>
+                                                            $29.00
+                                                        </td>
+                                                        <td>
+                                                            <span
+                                                                class="badge bg-success rounded-pill py-1 lh-sm px-2">Paid</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--//Page content End//-->
+
+                    @@include('./partials/footer.html')
+                </main>
+                <!--///////////Page content wrapper End///////////////-->
+            </div>
+        </div>
+        @@include('./partials/core-scripts.html')
+
+
+        <!--Page script begin-->
+        <script src="assets/vendor/inputmask.min.js"></script>
+        <script>
+            Inputmask().mask(document.querySelectorAll("[data-inputmask]"));
+        </script>
+    </body>
+
+</html>
